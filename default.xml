@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://github.com/Xilinx" name="xilinx"/>
+  <remote fetch="https://github.com/yoctoproject" name="yocto"/>
+  <remote fetch="https://github.com/slack2450" name="self"/>
   
   <default sync-j="4"/>
   
@@ -18,8 +20,8 @@
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="xilinx" revision="rel-v2022.2"/>
   <project name="meta-xilinx" path="sources/meta-xilinx" remote="xilinx" revision="rel-v2022.2"/>
   <project name="meta-xilinx-tools" path="sources/meta-xilinx-tools" remote="xilinx" revision="rel-v2022.2"/>
-  <project name="poky" path="sources/core" remote="xilinx" revision="rel-v2022.2"/>
-  <project name="yocto-manifests" path="sources/manifest" remote="xilinx" revision="rel-v2022.2"/>
+  <project name="poky" path="sources/core" remote="yocto" revision="kirkstone"/>
+  <project name="yocto-manifests" path="sources/manifest" remote="self" revision="rel-v2022.2"/>
   <project name="yocto-scripts" path="sources/yocto-scripts" remote="xilinx" revision="rel-v2022.2">
     <copyfile dest="setupsdk" src="setupsdk"/>
   </project>
